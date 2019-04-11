@@ -42,6 +42,9 @@ ln -s /path_to_Pascal_Person_Part/* data/datasets/pascal/
 ```
 + The datasets (CIHP & ATR) are available  at [google drive](https://drive.google.com/drive/folders/0BzvH3bSnp3E9ZW9paE9kdkJtM3M?usp=sharing) 
 and [baidu drive](http://pan.baidu.com/s/1nvqmZBN).
+And you also need to download the label with flipped.
+Download [cihp_flipped](https://drive.google.com/file/d/1aaJyQH-hlZEAsA7iH-mYeK1zLfQi8E2j/view?usp=sharing), unzip and store in `data/datasets/CIHP_4w/`. 
+Download [atr_flip](https://drive.google.com/file/d/1iR8Tn69IbDSM7gq_GG-_s11HCnhPkyG3/view?usp=sharing), unzip and store in `data/datasets/ATR/`.
 
 ### Inference
 We provide a simply script to get the visualization result on the CIHP dataset using [trained](https://drive.google.com/file/d/1O9YD4kHgs3w2DUcWxtHiEFyWjCBeS_Vc/view?usp=sharing)
