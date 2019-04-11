@@ -40,6 +40,8 @@ ln -s /path_to_Pascal_Person_Part/* data/datasets/pascal/
         /lists
         ...  
 ```
++ The datasets (CIHP & ATR) are available  at [google drive](https://drive.google.com/drive/folders/0BzvH3bSnp3E9ZW9paE9kdkJtM3M?usp=sharing) 
+and [baidu drive](http://pan.baidu.com/s/1nvqmZBN).
 
 ### Inference
 We provide a simply script to get the visualization result on the CIHP dataset using [trained](https://drive.google.com/file/d/1O9YD4kHgs3w2DUcWxtHiEFyWjCBeS_Vc/view?usp=sharing)
@@ -55,7 +57,7 @@ python exp/inference/inference.py  \
 
 ### Training
 #### Transfer learning
-1. Download the Pascal pretrained model(avaliable soon).
+1. Download the Pascal pretrained model(available soon).
 2. Run the `sh train_transfer_cihp.sh`.
 3. The results and models are saved in exp/transfer/run/.
 4. Evaluation and visualization script is eval_cihp.sh. You only need to change the attribute of `--loadmodel` before you run it.
@@ -75,19 +77,19 @@ Specify the specific model. And we provide the final model that you can download
 
 |Model|Google Cloud|Baidu Yun|
 |--------|--------------|-----------|
-|Graphonomy(CIHP)| [Download](https://drive.google.com/file/d/1cwEhlYEzC7jIShENNLnbmcBR0SNlZDE6/view?usp=sharing)| Avaliable soon|
+|Graphonomy(CIHP)| [Download](https://drive.google.com/file/d/1cwEhlYEzC7jIShENNLnbmcBR0SNlZDE6/view?usp=sharing)| Available soon|
 
 **CIHP trained model**
 
 |Model|Google Cloud|Baidu Yun|
 |--------|--------------|-----------|
-|Graphonomy(PASCAL)| [Download](https://drive.google.com/file/d/1O9YD4kHgs3w2DUcWxtHiEFyWjCBeS_Vc/view?usp=sharing)| Avaliable soon|
+|Graphonomy(PASCAL)| [Download](https://drive.google.com/file/d/1O9YD4kHgs3w2DUcWxtHiEFyWjCBeS_Vc/view?usp=sharing)| Available soon|
 
 **Universal trained model**
 
 |Model|Google Cloud|Baidu Yun|
 |--------|--------------|-----------|
-|Universal|Avaliable soon|Avaliable soon|
+|Universal|Available soon|Available soon|
 
 ### Todo:
 - [ ] release pretrained and trained models
