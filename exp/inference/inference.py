@@ -6,7 +6,7 @@ from datetime import datetime
 import os
 import sys
 from collections import OrderedDict
-sys.path.append('../../')
+sys.path.append('./')
 # PyTorch includes
 import torch
 from torch.autograd import Variable
