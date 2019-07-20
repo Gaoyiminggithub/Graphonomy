@@ -17,7 +17,7 @@ class GraphConvolution(nn.Module):
             self.bias = Parameter(torch.FloatTensor(out_features))
         else:
             self.register_parameter('bias',None)
-        # self.reset_parameters()
+        self.reset_parameters()
 
     def reset_parameters(self):
         # stdv = 1./math.sqrt(self.weight(1))
@@ -53,7 +53,7 @@ class Featuremaps_to_Graph(nn.Module):
         super(Featuremaps_to_Graph, self).__init__()
         self.pre_fea = Parameter(torch.FloatTensor(input_channels,nodes))
         self.weight = Parameter(torch.FloatTensor(input_channels,hidden_layers))
-        # self.reset_parameters()
+        self.reset_parameters()
 
     def forward(self, input):
         n,c,h,w = input.size()
@@ -84,7 +84,7 @@ class Featuremaps_to_Graph_transfer(nn.Module):
         self.weight = Parameter(torch.FloatTensor(input_channels,hidden_layers))
         self.pre_fea_transfer = nn.Sequential(*[nn.Linear(source_nodes, source_nodes),nn.LeakyReLU(True),
                                                 nn.Linear(source_nodes, nodes), nn.LeakyReLU(True)])
-        # self.reset_parameters()
+        self.reset_parameters()
 
     def forward(self, input, source_pre_fea):
         self.pre_fea.data = self.pre_fea_learn(source_pre_fea)
@@ -112,7 +112,7 @@ class Graph_to_Featuremaps(nn.Module):
         super(Graph_to_Featuremaps, self).__init__()
         self.node_fea = Parameter(torch.FloatTensor(input_channels+hidden_layers,1))
         self.weight = Parameter(torch.FloatTensor(hidden_layers,output_channels))
-        # self.reset_parameters()
+        self.reset_parameters()
 
     def reset_parameters(self):
         for ww in self.parameters():
@@ -157,7 +157,7 @@ class Graph_to_Featuremaps_savemem(nn.Module):
         self.node_fea_for_res = Parameter(torch.FloatTensor(input_channels, 1))
         self.node_fea_for_hidden = Parameter(torch.FloatTensor(hidden_layers, 1))
         self.weight = Parameter(torch.FloatTensor(hidden_layers,output_channels))
-        # self.reset_parameters()
+        self.reset_parameters()
 
     def reset_parameters(self):
         for ww in self.parameters():
@@ -217,7 +217,7 @@ class Graph_trans(nn.Module):
             self.bias = Parameter(torch.FloatTensor(out_features))
         else:
             self.register_parameter('bias',None)
-        # self.reset_parameters()
+        self.reset_parameters()
 
     def reset_parameters(self):
         # stdv = 1./math.sqrt(self.weight(1))
