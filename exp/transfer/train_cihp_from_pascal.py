@@ -69,7 +69,7 @@ def get_parser():
     parser.add_argument('--numworker',default=12,type=int)
     parser.add_argument('--freezeBN', choices=dict(true=True, false=False), default=True, action=LookupChoices)
     parser.add_argument('--step', default=10, type=int)
-    parser.add_argument('--classes', default=7, type=int)
+    parser.add_argument('--classes', default=20, type=int)
     parser.add_argument('--testInterval', default=10, type=int)
     parser.add_argument('--loadmodel',default='',type=str)
     parser.add_argument('--pretrainedModel', default='', type=str)
@@ -176,7 +176,7 @@ def main(opts):
 
     # Network definition
     if backbone == 'xception':
-        net_ = deeplab_xception_transfer.deeplab_xception_transfer_projection_savemem(n_classes=20, os=16,
+        net_ = deeplab_xception_transfer.deeplab_xception_transfer_projection_savemem(n_classes=opts.classes, os=16,
                                                                                       hidden_layers=opts.hidden_layers, source_classes=7, )
     elif backbone == 'resnet':
         # net_ = deeplab_resnet.DeepLabv3_plus(nInputChannels=3, n_classes=7, os=16, pretrained=True)
@@ -195,7 +195,7 @@ def main(opts):
     if not model_path == '':
         x = torch.load(model_path)
         net_.load_state_dict_new(x)
-        print('load pretrainedModel.')
+        print('load pretrainedModel:', model_path)
     else:
         print('no pretrainedModel.')
     if not opts.loadmodel =='':
@@ -320,7 +320,7 @@ def main(opts):
         # One testing epoch
         if useTest and epoch % nTestInterval == (nTestInterval - 1):
             val_cihp(net_,testloader=testloader, testloader_flip=testloader_flip, test_graph=test_graph,
-                     epoch=epoch,writer=writer,criterion=criterion)
+                     epoch=epoch,writer=writer,criterion=criterion, classes=opts.classes)
         torch.cuda.empty_cache()
 
 

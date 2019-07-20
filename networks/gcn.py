@@ -266,6 +266,7 @@ class Graph_trans(nn.Module):
 if __name__ == '__main__':
 
     graph = torch.randn((7,128))
-    pred = (torch.rand((7,7))*7).int()
-    # a = en.forward(graph,pred)
-    # print(a.size())
+    en = GraphConvolution(128,12)
+    # pred = (torch.rand((7,7))*7).int()
+    a = en.forward(graph)
+    print(a)
