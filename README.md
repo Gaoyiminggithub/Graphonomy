@@ -92,7 +92,7 @@ Specify the specific model. And we provide the final model that you can download
 
 |Model|Google Cloud|Baidu Yun|
 |--------|--------------|-----------|
-|Universal|Available soon|Available soon|
+|Universal| [Download](https://drive.google.com/file/d/1sWJ54lCBFnzCNz5RTCGQmkVovkY9x8_D/view?usp=sharing)|Available soon|
 
 ### Todo:
 - [ ] release pretrained and trained models
@@ -114,3 +114,9 @@ year = {2019},
 if you have any questions about this repo, please feel free to contact 
 [gaoym9@mail2.sysu.edu.cn](mailto:gaoym9@mail2.sysu.edu.cn).
 
+##
+
+## Related work
++ Self-supervised Structure-sensitive Learning [SSL](https://github.com/Engineering-Course/LIP_SSL)
++ Joint Body Parsing & Pose Estimation Network  [JPPNet](https://github.com/Engineering-Course/LIP_JPPNet)
++ Instance-level Human Parsing via Part Grouping Network [PGN](https://github.com/Engineering-Course/CIHP_PGN)
