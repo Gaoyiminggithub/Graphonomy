@@ -775,7 +775,7 @@ class deeplab_xception_transfer_projection_savemem(deeplab_xception_transfer_bas
         source_graph = self.source_featuremap_2_graph(x)
         source_graph1 = self.source_graph_conv1.forward(source_graph,adj=adj2_source, relu=True)
         source_graph2 = self.source_graph_conv2.forward(source_graph1, adj=adj2_source, relu=True)
-        source_graph3 = self.source_graph_conv3.forward(source_graph2, adj=adj2_source, relu=True)
+        source_graph3 = self.source_graph_conv2.forward(source_graph2, adj=adj2_source, relu=True)
 
         source_2_target_graph1_v5 = self.transpose_graph.forward(source_graph1, adj=adj3_transfer, relu=True)
         source_2_target_graph2_v5 = self.transpose_graph.forward(source_graph2, adj=adj3_transfer, relu=True)
