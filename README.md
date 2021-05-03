@@ -5,6 +5,7 @@ This repository contains the code for the paper:
 [**Graphonomy: Universal Human Parsing via Graph Transfer Learning**](https://arxiv.org/abs/1904.04536)
 ,Ke Gong, Yiming Gao, Xiaodan Liang, Xiaohui Shen, Meng Wang, Liang Lin.
 
+
 # Environment and installation
 + Pytorch = 0.4.0
 + torchvision
@@ -120,3 +121,4 @@ if you have any questions about this repo, please feel free to contact
 + Self-supervised Structure-sensitive Learning [SSL](https://github.com/Engineering-Course/LIP_SSL)
 + Joint Body Parsing & Pose Estimation Network  [JPPNet](https://github.com/Engineering-Course/LIP_JPPNet)
 + Instance-level Human Parsing via Part Grouping Network [PGN](https://github.com/Engineering-Course/CIHP_PGN)
++ Graphonomy: Universal Image Parsing via Graph Reasoning and Transfer [paper](https://arxiv.org/abs/2101.10620) [code](https://github.com/Gaoyiminggithub/Graphonomy-Panoptic)
