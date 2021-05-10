@@ -81,13 +81,13 @@ Specify the specific model. And we provide the final model that you can download
 
 |Model|Google Cloud|Baidu Yun|
 |--------|--------------|-----------|
-|Graphonomy(CIHP)| [Download](https://drive.google.com/file/d/1cwEhlYEzC7jIShENNLnbmcBR0SNlZDE6/view?usp=sharing)| Available soon|
+|Graphonomy(CIHP)| [Download](https://drive.google.com/file/d/1E_V_gVDWfAJFPfe-LLu2RQaYQMdhjv9h/view?usp=sharing)| Available soon|
 
 **CIHP trained model**
 
 |Model|Google Cloud|Baidu Yun|
 |--------|--------------|-----------|
-|Graphonomy(PASCAL)| [Download](https://drive.google.com/file/d/1O9YD4kHgs3w2DUcWxtHiEFyWjCBeS_Vc/view?usp=sharing)| Available soon|
+|Graphonomy(PASCAL)| [Download](https://drive.google.com/file/d/1eUe18HoH05p0yFUd_sN6GXdTj82aW0m9/view?usp=sharing)| Available soon|
 
 **Universal trained model**
 
